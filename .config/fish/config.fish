@@ -202,8 +202,8 @@ set -x LAB_DIR /mnt/lab
 set -x MPLAYER_HOME $XDG_CONFIG_HOME/mplayer
 set -x DOTNET_CLI_HOME $XDG_DATA_HOME/dotnet
 set -x CARGO_HOME $XDG_DATA_HOME/cargo
-#set -x GNUPGHOME $XDG_DATA_HOME/gnupg
-#set -x PASSWORD_STORE_DIR $XDG_DATA_HOME/pass
+set -x GNUPGHOME $XDG_DATA_HOME/gnupg
+set -x PASSWORD_STORE_DIR $XDG_DATA_HOME/pass
 set -x STACK_ROOT $XDG_DATA_HOME/stack/stack
 set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -x NUGET_PACKAGES $XDG_CACHE_HOME/NuGetPackages
