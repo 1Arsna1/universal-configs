@@ -133,6 +133,8 @@ if status is-interactive
   #guess what
   alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
+  #podman
+  alias pd='podman'
 end
 
 function fish_user_key_bindings
@@ -194,6 +196,7 @@ set -x VIDEOS_DIR $HOME/Videos
 set -x STATE_HOME $HOME/.local/state/
 set -x THEME_DIR $XDG_DATA_HOME/themes
 set -x ICON_DIR $XDG_DATA_HOME/icons
+set -x LAB_DIR /mnt/lab
 
 #setironmental variables (for $XDG_DATA)
 set -x MPLAYER_HOME $XDG_CONFIG_HOME/mplayer
@@ -244,10 +247,10 @@ set -x VKBASALT_CONFIG_FILE $XDG_CONFIG_HOME/vkBasalt/vkBasalt.conf
 #set -x MANGOHUD_CONFIG $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
 #set -x MANGOHUD_CONFIGFILE $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
 #set -x MANGOHUD_PRESETSFILE $XDG_CONFIG_HOME/MangoHud/preset.conf
-#set -x WINE_FULLSCREEN_FSR 1
+set -x WINE_FULLSCREEN_FSR 1
 #set -x MANGOHUD 1
 #set -x MANGOHUD_DLSYM 1
-#set -x ENABLE_VKBASALT 1
+set -x ENABLE_VKBASALT 1
 
 # Created by `pipx` on 2024-07-24 19:22:55
 set PATH $PATH /home/arsna/.local/bin
