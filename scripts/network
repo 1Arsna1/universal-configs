@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --needed wireguard-tools networkmanager-openvpn networkmanager openvpn openresolv firewalld systemd-resolvconf
+sudo pacman -S --needed wireguard-tools networkmanager-openvpn networkmanager openvpn openresolv firewalld systemd-resolvconf libnatpmp
 
 echo "wireguard" | sudo tee /etc/modules-load.d/wireguard.conf
 systemctl enable --now systemd-resolvconf firewalld
