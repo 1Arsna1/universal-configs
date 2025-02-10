@@ -134,6 +134,7 @@ if status is-interactive
   alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/master/roll.sh | bash'
 
   #podman
+  alias pdreset='sysnew --user podman.socket && pd machine reset && pd machine init && podman-tui'
   alias pd='podman'
 end
 
