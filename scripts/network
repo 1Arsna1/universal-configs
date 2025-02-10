@@ -4,3 +4,7 @@ sudo pacman -S --needed wireguard-tools networkmanager-openvpn networkmanager op
 
 echo "wireguard" | sudo tee /etc/modules-load.d/wireguard.conf
 systemctl enable --now systemd-resolvconf firewalld
+sudo groupadd wireguard
+sudo usermod wireguard $(whoami)
+sudo chgrp wireguard /etc/wireguard
+sudo chmod 070 /etc/wireguard
