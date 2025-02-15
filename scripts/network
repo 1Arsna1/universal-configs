@@ -1,6 +1,12 @@
 #!/bin/bash
 
-sudo pacman -S --needed wireguard-tools networkmanager-openvpn networkmanager openvpn openresolv firewalld systemd-resolvconf libnatpmp
+sudo pacman -S --needed wireguard-tools networkmanager-openvpn networkmanager openvpn firewalld systemd-resolvconf libnatpmp
+
+sudo mv /etc/resolv.conf /etc/resolv.conf.bak && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
+sudo mkdir /etc/systemd/resolved.conf.d/
+sudo echo "[Resolve]" | sudo tee /etc/systemd/resolved.conf.d/magentadns.conf
+sudo echo "DNS=192.168.0.1 2a02:8388:1741:4b00:10:18ff:fed2:2644" >> /etc/systemd/resolved.conf.d/magentadns.conf
 
 echo "wireguard" | sudo tee /etc/modules-load.d/wireguard.conf
 systemctl enable --now systemd-resolved firewalld
