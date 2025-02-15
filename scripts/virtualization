@@ -6,7 +6,7 @@ sudo usermod -aG libvirt,kvm,libvirt-qemu $(whoami)
 echo "options kvm_amd nested=1" | sudo tee /etc/modprobe.d/kvm_amd.conf
 echo "options kvm_amd sev=1" | sudo tee /etc/modprobe.d/amd-sev.conf
 echo "br_netfilter" | sudo tee /etc/modules-load.d/bridge.conf
-sudo systemctl enable libvirtd cockpit.socket
+sudo systemctl enable libvirtd.socket libvirt-ro.socket libvirt-admin.socket virtlogd.socket virtlogd-admin.socket virtlockd.socket virtlockd-admin.socket cockpit.socket
 sudo systemctl enable --now tuned
 sudo tuned-adm profile desktop
 systemctl --user enable --now podman.socket
