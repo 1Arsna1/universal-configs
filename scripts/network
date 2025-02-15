@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S --needed wireguard-tools networkmanager-openvpn networkmanager openvpn firewalld systemd-resolvconf libnatpmp
+sudo pacman -S --needed wireguard-tools networkmanager-openvpn networkmanager openvpn firewalld systemd-resolvconf libnatpmp nmap vulscan
 
 sudo mv /etc/resolv.conf /etc/resolv.conf.bak && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
