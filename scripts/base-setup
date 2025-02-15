@@ -7,7 +7,7 @@ sudo pacman -S --needed --asdeps giflib lib32-giflib gnutls lib32-gnutls v4l-uti
 sudo pacman -S --needed mesa mesa-demos mesa-utils vulkan-mesa-layers lib32-mesa glu lib32-glu lib32-mesa-demos lib32-mesa-utils lib32-vulkan-mesa-layers spirv-tools vkmark vulkan-devel libva libva-utils lib32-libva libvdpau-va-gl libvdpau lib32-libvdpau vdpauinfo xorg xorg-apps xorg-server xorg-xinit wayland xwaylandvideobridge wayland wayland-protocols xorg-drivers
 
 
-sudo systemctl enable cups.socket cups-browsed bluetooth sshd ly
+sudo systemctl enable cups.socket cups-browsed cups.path bluetooth sshd ly
 systemctl enable --user gamemoded 
 sudo usermod -aG gamemode,games $(whoami) 
 sudo usermod -s /bin/fish $(whoami)
