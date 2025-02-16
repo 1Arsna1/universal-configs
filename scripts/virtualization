@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -S --needed qemu-full qemu-img libvirt virt-install virt-manager virt-viewer edk2-ovmf dnsmasq swtpm guestfs-tools libosinfo dmidecode cockpit cockpit-files cockpit-machines cockpit-packagekit cockpit-podman cockpit-storaged wireguard-tools networkmanager-openvpn networkmanager openvpn openresolv podman podman-compose crun runc tuned bridge-utils
+sudo pacman -S --needed qemu-full qemu-img libvirt virt-install virt-manager virt-viewer edk2-ovmf dnsmasq swtpm guestfs-tools libosinfo dmidecode cockpit cockpit-files cockpit-machines cockpit-packagekit cockpit-podman cockpit-storaged wireguard-tools networkmanager-openvpn networkmanager openvpn openresolv podman podman-compose crun tuned bridge-utils
 sudo wget "https://raw.githubusercontent.com/ProtonVPN/scripts/master/update-resolv-conf.sh" -O "/etc/openvpn/update-resolv-conf"
 sudo chmod +x "/etc/openvpn/update-resolv-conf"
 sudo usermod -aG libvirt,kvm,libvirt-qemu $(whoami)
