@@ -136,6 +136,17 @@ if status is-interactive
   #podman
   alias pdreset='sysnew --user podman.socket && pd machine reset && pd machine init && podman-tui'
   alias pd='podman'
+  alias pdx='podman exec'
+  alias pdxt='podman exec -ti'
+  alias dsr1='podman exec -ti ollama ollama run deepseek-r1:32b'
+  alias dsc='podman exec -ti ollama ollama run deepseek-coder-v2:16b'
+
+  alias lwg='ls /etc/wireguard/'
+  alias lov='ls /etc/openvpn/client/'
+  alias wg-up='sudo wg-quick up'
+  alias wg-down='sudo wg-quick down'
+  #  alias ovn='sudo openvpn'
+
 end
 
 function fish_user_key_bindings
