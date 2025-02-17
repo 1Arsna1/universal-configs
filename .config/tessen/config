@@ -1,0 +1,24 @@
+# vim:ft=sh
+# shellcheck disable=SC2148,SC2034
+#
+
+pass_backend="pass"
+dmenu_backend="tofi"
+action="copy"
+tofi_config_file="$XDG_CONFIG_HOME/tofi/config"
+
+# the name of the key which will be used to decide the username
+# this can also be a simple regex such as (user|login)
+# userkey="(user|login)"
+# the name of the key which will be used to decide the url
+# this can also be a simple regex such as (url|website)
+# urlkey="(url|website)"
+# the name of the key which will be used to implement a custom autotype operation
+# this can also be a simple regex as such as (auto|type)
+# autotype_key="(autotype|type)"
+
+# the delay (in milliseconds) introduced between successive autotype operations
+# leave it commented to use the default value of 100ms
+# delay=""
+
+notify="true"

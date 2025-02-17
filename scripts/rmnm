@@ -1,0 +1,2 @@
+#!/usr/bin/bash
+paru -R networkmanager networkmanager-qt networkmanager-qt5 network-manager-applet libnma-gtk4 networkmanager-openvpn
