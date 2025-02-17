@@ -8,7 +8,7 @@ if status is-interactive
   alias pubip='curl ip.me -4 && curl ip.me -6'
   alias pub4='curl ip.me -4'
   alias pub6='curl ip.me -6'
-  alias adb='HOME="$XDG_DATA_HOME"/andoid adb'
+  alias adb='HOME="$XDG_DATA_HOME"/android adb'
   #virt-machines
   alias mntshare='sudo mount -t virtiofs '
   #initramfs & bootloader
@@ -138,15 +138,14 @@ if status is-interactive
   alias pd='podman'
   alias pdx='podman exec'
   alias pdxt='podman exec -ti'
-  alias dsr1='podman exec -ti ollama ollama run deepseek-r1:32b'
-  alias dsc='podman exec -ti ollama ollama run deepseek-coder-v2:16b'
+  alias dsr1='podman exec -ti ollama ollama run deepseek-r1'
+  alias dsc='podman exec -ti ollama ollama run deepseek-coder-v2'
 
   alias lwg='ls /etc/wireguard/'
   alias lov='ls /etc/openvpn/client/'
-  alias wg-up='sudo wg-quick up'
-  alias wg-down='sudo wg-quick down'
   #  alias ovn='sudo openvpn'
-
+  alias icat='kitten icat'
+  alias imv='imv -d -r -s none'
 end
 
 function fish_user_key_bindings
@@ -208,61 +207,59 @@ set -x VIDEOS_DIR $HOME/Videos
 set -x STATE_HOME $HOME/.local/state/
 set -x THEME_DIR $XDG_DATA_HOME/themes
 set -x ICON_DIR $XDG_DATA_HOME/icons
-set -x LAB_DIR /mnt/lab
+set -x XCURSOR_PATH $XDG_DATA_HOME/icons
+set -x CALCHISTFILE $XDG_CACHE_HOME/calc_history
 
-#setironmental variables (for $XDG_DATA)
-set -x MPLAYER_HOME $XDG_CONFIG_HOME/mplayer
-set -x DOTNET_CLI_HOME $XDG_DATA_HOME/dotnet
-set -x CARGO_HOME $XDG_DATA_HOME/cargo
+#environmental variables (for $XDG_DATA)
 set -x GNUPGHOME $XDG_DATA_HOME/gnupg
 set -x PASSWORD_STORE_DIR $XDG_DATA_HOME/pass
-set -x STACK_ROOT $XDG_DATA_HOME/stack/stack
-set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
-set -x NUGET_PACKAGES $XDG_CACHE_HOME/NuGetPackages
-set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
+set -x PASSWORD_STORE_EXTENSIONS $XDG_DATA_HOME/pass/extensions
 set -x WINEPREFIX $XDG_DATA_HOME/wine
+set -x DOTNET_CLI_HOME $XDG_DATA_HOME/dotnet
+set -x CARGO_HOME $XDG_DATA_HOME/cargo
+set -x STACK_ROOT $XDG_DATA_HOME/stack/stack
+set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
 set -x CUDA_CACHE_PATH $XDG_DATA_HOME/nv
-set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
-set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -x W3M_DIR $XDG_DATA_HOME/w3m
-#set -x XINITRC $XDG_CONFIG_HOME/X11/xinitrc
-#set -x XAUTHORITY $XDG_CONFIG_HOME/X11/Xauthority
-set -x XCURSOR_PATH $XDG_DATA_HOME/icons
 set -x XICON_PAT $XDG_DATA_HOME/icons
-set -x CALCHISTFILE $XDG_CACHE_HOME/calc_history
-set -x _JAVA_OPTIONS Djava.util.prefs.userRoot-x $XDG_CONFIG_HOME/java
-set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 set -x ANDROID_USER_HOME $XDG_DATA_HOME/android
-set -x _JAVA_OPTIONS -DJAVA.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
 set -x RENPY_PATH_TO_SAVES $XDG_DATA_HOME
-#universal variables
-set -xU GOPATH $XDG_DATA_HOME/go
-set -xU PATH $PATH $GOPATH/bin
-set -xU GOBIN $XDG_DATA_HOME/go/bin
-set -xU LIBGUESTFS_BACKEND direct
-set -xU LIBVIRT_DEFAULT_URI qemu:///system
-set -xU SSH_TPM_AGENT_SWTPM 1
-
-#zoxide
+set -x GOPATH $XDG_DATA_HOME/go
+set -x GOBIN $XDG_DATA_HOME/go/bin
 set -x _ZO_DATA_DIR $XDG_DATA_HOME
-set -x _ZO_ECHO 1
-set -x _ZO_RESOLVE_SYMLINKS 1
 
-#fzf
-#set -x FZF_DEFAULT_COMMAND
-set -x FZF_DEFAILT_OPTS
+#environmental variables (for $XDG_CONFIG)
+set -x _JAVA_OPTIONS -DJAVA.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+set -x _JAVA_OPTIONS Djava.util.prefs.userRoot-x $XDG_CONFIG_HOME/java
+set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
+set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
+set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+set -x MPLAYER_HOME $XDG_CONFIG_HOME/mplayer
+set -x XINITRC $XDG_CONFIG_HOME/X11/xinitrc
+set -x XAUTHORITY $XDG_CONFIG_HOME/X11/Xauthority
 set -x FTF_DEFAULT_OPTS_FILE $XDG_CONFIG_HOME/fzf/fzfrc
-
-#gaming
 set -x DXVK_CONFIG_FILE $XDG_CONFIG_HOME/dxvk/dxvk.conf
 set -x VKBASALT_CONFIG_FILE $XDG_CONFIG_HOME/vkBasalt/vkBasalt.conf
-#set -x MANGOHUD_CONFIG $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
-#set -x MANGOHUD_CONFIGFILE $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
-#set -x MANGOHUD_PRESETSFILE $XDG_CONFIG_HOME/MangoHud/preset.conf
+set -x MANGOHUD_CONFIG $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
+set -x MANGOHUD_CONFIGFILE $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
+set -x MANGOHUD_PRESETSFILE $XDG_CONFIG_HOME/MangoHud/preset.conf
+
+#environmental variables (for $XDG_*)
+set -x NUGET_PACKAGES $XDG_CACHE_HOME/NuGetPackages
+set -x SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+
+#environmental variables (for values)
+set -x LIBGUESTFS_BACKEND direct
+set -x LIBVIRT_DEFAULT_URI qemu:///system
+set -x SSH_TPM_AGENT_SWTPM 1
+set -x _ZO_ECHO 1
+set -x _ZO_RESOLVE_SYMLINKS 1
+#set -x FZF_DEFAULT_COMMAND
+set -x FZF_DEFAILT_OPTS
 set -x WINE_FULLSCREEN_FSR 1
 #set -x MANGOHUD 1
 #set -x MANGOHUD_DLSYM 1
 set -x ENABLE_VKBASALT 1
+set -x PASSWORD_STORE_CLIP_TIME 10
+set -x PASSWORD_STORE_ENABLE_EXTENSIONS true
 
-# Created by `pipx` on 2024-07-24 19:22:55
-set PATH $PATH /home/arsna/.local/bin
