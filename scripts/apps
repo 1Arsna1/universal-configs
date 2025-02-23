@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo pacman -S --needed obsidian godot love mpv steam lutris winetricks remmina libreoffice-fresh signal-desktop krita blender discord kvantum nwg-look gnome-disk-utility gnome-software goverlay protonmail-bridge protonmail-bridge-core neovide prismlauncher thunderbird neovide system-config-printer glab github-cli calc bluetui gdu zoxide systemctl-tui systemdgenie
+sudo pacman -S --needed obsidian godot love mpv steam lutris winetricks remmina libreoffice-fresh signal-desktop krita blender discord kvantum nwg-look gnome-disk-utility gnome-software goverlay protonmail-bridge protonmail-bridge-core neovide prismlauncher thunderbird neovide system-config-printer glab github-cli calc bluetui gdu zoxide systemctl-tui systemdgenie engrampa 
 #proton-vpn-gtk-app
 
 

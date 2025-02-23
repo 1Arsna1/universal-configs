@@ -40,6 +40,7 @@ if status is-interactive
   alias sysstop='systemctl stop'
   alias sysgo='systemctl enable --now'
   alias sysstat='systemctl status'
+  alias systui='systemctl-tui'
   #general
   alias wg-up='sudo wg-quick up'
   alias wg-down='sudo wg-quick down'
@@ -235,14 +236,14 @@ set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -x GTK2_RC_FILES $XDG_CONFIG_HOME/gtk-2.0/gtkrc
 set -x NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
 set -x MPLAYER_HOME $XDG_CONFIG_HOME/mplayer
-set -x XINITRC $XDG_CONFIG_HOME/X11/xinitrc
-set -x XAUTHORITY $XDG_CONFIG_HOME/X11/Xauthority
+#set -x XINITRC $XDG_CONFIG_HOME/X11/xinitrc
+#set -x XAUTHORITY $XDG_CONFIG_HOME/X11/Xauthority
 set -x FTF_DEFAULT_OPTS_FILE $XDG_CONFIG_HOME/fzf/fzfrc
 set -x DXVK_CONFIG_FILE $XDG_CONFIG_HOME/dxvk/dxvk.conf
 set -x VKBASALT_CONFIG_FILE $XDG_CONFIG_HOME/vkBasalt/vkBasalt.conf
-set -x MANGOHUD_CONFIG $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
+#set -x MANGOHUD_CONFIG $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
 set -x MANGOHUD_CONFIGFILE $XDG_CONFIG_HOME/MangoHud/MangoHud.conf
-set -x MANGOHUD_PRESETSFILE $XDG_CONFIG_HOME/MangoHud/preset.conf
+#set -x MANGOHUD_PRESETSFILE $XDG_CONFIG_HOME/MangoHud/preset.conf
 
 #environmental variables (for $XDG_*)
 set -x NUGET_PACKAGES $XDG_CACHE_HOME/NuGetPackages
@@ -263,3 +264,6 @@ set -x ENABLE_VKBASALT 1
 set -x PASSWORD_STORE_CLIP_TIME 10
 set -x PASSWORD_STORE_ENABLE_EXTENSIONS true
 
+
+# Created by `pipx` on 2025-02-21 21:57:44
+set PATH $PATH /home/arsna/.local/bin
