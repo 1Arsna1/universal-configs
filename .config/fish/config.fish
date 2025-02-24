@@ -146,7 +146,7 @@ if status is-interactive
   alias lov='ls /etc/openvpn/client/'
   #  alias ovn='sudo openvpn'
   alias icat='kitten icat'
-  alias imv='imv -d -r -s none'
+  alias imv='imv -d -r -s crop'
 end
 
 function fish_user_key_bindings
