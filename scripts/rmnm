@@ -1,2 +1,3 @@
 #!/usr/bin/bash
-paru -R networkmanager networkmanager-qt networkmanager-qt5 network-manager-applet libnma-gtk4 networkmanager-openvpn
+paru -R networkmanager libnm libnma libnma-common libnma-gtk4 networkmanager-openvpn networkmanager-qt networkmanager-qt5 nm-connection-editor lib32-libnm network-manager-applet
+paru -S networkmanager libnm libnma libnma-common libnma-gtk4 networkmanager-openvpn networkmanager-qt networkmanager-qt5 nm-connection-editor lib32-libnm network-manager-applet
