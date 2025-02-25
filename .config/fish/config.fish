@@ -147,6 +147,7 @@ if status is-interactive
   #  alias ovn='sudo openvpn'
   alias icat='kitten icat'
   alias imv='imv -d -r -s crop'
+  alias linkhome='stow --target=$HOME .'
 end
 
 function fish_user_key_bindings
