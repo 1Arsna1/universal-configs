@@ -148,6 +148,7 @@ if status is-interactive
   alias icat='kitten icat'
   alias imv='imv -d -r -s crop'
   alias linkhome='stow --target=$HOME .'
+  alias mpback='mpvpaper --layer background -o "no-audio loop"'
 end
 
 function fish_user_key_bindings
