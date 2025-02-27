@@ -56,6 +56,7 @@ if status is-interactive
   alias nv='nvim'
   alias vim='nvim'
   alias v='nvim'
+  #alias fzf='nvim $(fzf --preview="cat {}")'
   alias ae='autoexec'
   alias fetch='uwufetch'
   alias cat='bat'
