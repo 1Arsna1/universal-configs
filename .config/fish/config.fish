@@ -8,7 +8,7 @@ if status is-interactive
   alias pubip='curl ip.me -4 && curl ip.me -6'
   alias pub4='curl ip.me -4'
   alias pub6='curl ip.me -6'
-  alias adb='HOME="$XDG_DATA_HOME"/android adb'
+  #alias adb='HOME="$XDG_DATA_HOME"/android adb'
   #virt-machines
   alias mntshare='sudo mount -t virtiofs '
   #initramfs & bootloader
@@ -41,6 +41,7 @@ if status is-interactive
   alias sysgo='systemctl enable --now'
   alias sysstat='systemctl status'
   alias systui='systemctl-tui'
+  alias sysedit='systemctl edit'
   #general
   alias wg-up='sudo wg-quick up'
   alias wg-down='sudo wg-quick down'
@@ -147,7 +148,6 @@ if status is-interactive
   alias lov='ls /etc/openvpn/client/'
   #  alias ovn='sudo openvpn'
   alias icat='kitten icat'
-  alias imv='imv -d -r -s crop'
   alias linkhome='stow --target=$HOME .'
   alias mpback='mpvpaper --layer background -o "no-audio loop"'
 end
@@ -269,4 +269,4 @@ set -x PASSWORD_STORE_ENABLE_EXTENSIONS true
 
 
 # Created by `pipx` on 2025-02-21 21:57:44
-set PATH $PATH /home/arsna/.local/bin
+set -x PATH $PATH /home/arsna/.local/bin
