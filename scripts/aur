@@ -4,6 +4,6 @@ rustup install stable
 sudo pacman -S --needed rustup base-devel git && git clone https://aur.archlinux.org/paru.git
 cd paru && makepkg -si
 
-paru -S --needed xdg-ninja vkd3d-proton-bin dxvk-bin arrpc cnijfilter2 scangearmp2 opentabletdriver vkbasalt vkbasalt-cli lib32-vkbasalt limine-snapper-sync tessen pass-secret-service-bin pakseec
+paru -S --needed xdg-ninja vkd3d-proton-bin dxvk-bin arrpc cnijfilter2 scangearmp2 opentabletdriver vkbasalt vkbasalt-cli lib32-vkbasalt limine-snapper-sync tessen pass-secret-service-bin pakseec tessen
 systemctl enable --user arrpc opentabletdriver
 

@@ -1,9 +1,0 @@
-#!/bin/bash
-#gpg-tui twitch-tui toot bandwhich
-#protonmail-bridge
-#streamlink mpd mpc protonmail-bridge-core uwufetch stylepak-git hyfetch fastfetch
-#mpd-mpris gtuber
-#plymouth
-flatpak install flathub com.jetbrains.PyCharm-Professional
-flatpak install flathub com.jetbrains.CLion
-flatpak install flathub com.jetbrains.WebStorm
